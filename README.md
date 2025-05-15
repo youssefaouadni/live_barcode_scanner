@@ -10,7 +10,7 @@ A Flutter package for real-time barcode scanning on iOS and Android. This packag
 - **Torch Control**: Toggle the camera flash to scan in low-light conditions.
 - **Zoom Support**: Programmatically adjust the camera zoom level.
 - **Event Streaming**: Receive barcode data and error events via Flutter’s `EventChannel`.
-- **Cross-Platform**: Native implementations for iOS (AVFoundation) and Android (assumed CameraX or equivalent).
+- **Cross-Platform**: Native implementations for iOS (AVFoundation) and Android (CameraX).
 
 ## Installation
 
@@ -73,52 +73,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-```
-
-### Controlling the Scanner
-
-The package provides a method channel to control the scanner:
-
-- **Start Scanning**:
-  ```dart
-  await _methodChannel.invokeMethod('startScan', {'scanFrameSize': 300.0});
-  ```
-
-- **Stop Scanning**:
-  ```dart
-  await _methodChannel.invokeMethod('stopScan');
-  ```
-
-- **Pause Scanning**:
-  ```dart
-  await _methodChannel.invokeMethod('pauseScan');
-  ```
-
-- **Resume Scanning**:
-  ```dart
-  await _methodChannel.invokeMethod('resumeScan');
-  ```
-
-- **Toggle Torch**:
-  ```dart
-  await _methodChannel.invokeMethod('toggleTorch');
-  ```
-
-- **Set Zoom**:
-  ```dart
-  await _methodChannel.invokeMethod('setZoom', {'zoomFactor': 2.0});
-  ```
-
-### Customizing the Scan Frame
-
-You can adjust the scan frame size by passing `scanFrameSize` in the `creationParams` or `startScan` call:
-
-```dart
-UiKitView(
-  viewType: 'live_barcode_scanner_view',
-  creationParams: {'scanFrameSize': 250.0},
-  creationParamsCodec: const StandardMessageCodec(),
-)
 ```
 
 ## Platform Configuration
@@ -205,8 +159,8 @@ Please include tests and update the documentation as needed.
 
 ## License
 
-This package is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This package is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-[Pub.dev](https://pub.dev) | [GitHub](https://github.com/your-repo/live_barcode_scanner) | [Issues](https://github.com/your-repo/live_barcode_scanner/issues)
+[Pub.dev](https://pub.dev/packages/ml_kit_live_barcode_scanner) | [GitHub](https://github.com/youssefaouadni/live_barcode_scanner) | [Issues](https://github.com/youssefaouadni/live_barcode_scanner/issues)
