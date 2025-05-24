@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/services.dart';
-import 'package:live_barcode_scanner/live_barcode_scanner_method_channel.dart';
+import 'package:ml_kit_live_barcode_scanner/live_barcode_scanner_method_channel.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('live_barcode_scanner');
