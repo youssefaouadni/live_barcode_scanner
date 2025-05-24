@@ -1,6 +1,6 @@
 name: ml_kit_live_barcode_scanner
 description: "A flutter plugin that scan barcode and Qr Code works on ios and android"
-version: 0.0.2
+version: 0.0.2+1
 repository: https://github.com/youssefaouadni/live_barcode_scanner.git
 
 environment:
